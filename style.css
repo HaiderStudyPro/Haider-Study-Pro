@@ -6,8 +6,17 @@
 }
 
 body {
+  background-image: url('haider-study-pro-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #f5f9ff;
   color: #222;
+  animation: gradientBG 10s ease infinite;
 }
 
 header {
@@ -23,17 +32,20 @@ header {
 .search-bar {
   margin: 1.5rem auto;
   text-align: center;
+  width: 90%;
+  max-width: 500px;
 }
 
 .search-bar input {
-  padding: 0.5rem;
-  width: 60%;
-  max-width: 400px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Class section buttons */
 .class-section {
   padding: 1rem;
   display: flex;
@@ -43,13 +55,14 @@ header {
 
 .class-card {
   background: white;
-  padding: 1.2rem;
-  border-radius: 1rem;
-  width: 90%;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  width: 92%;
   max-width: 500px;
   margin: 1rem 0;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -59,10 +72,11 @@ header {
 }
 
 .class-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 0.5rem;
 }
 
+/* Practice Zone Button */
 .practice-zone {
   position: fixed;
   bottom: 20px;
@@ -82,24 +96,27 @@ header {
   transform: scale(1.05) perspective(600px) rotateX(5deg);
 }
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
   color: #888;
 }
-body {
-  background: linear-gradient(-45deg, #00c6ff, #0072ff, #00c6ff, #0072ff);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
-}
-body {
-  background-image: url('haider-study-pro-bg.png'); /* ya 'images/haider-study-pro-bg.png' if inside images folder */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+
+/* Optional: Responsive font size for smaller devices */
+@media (max-width: 480px) {
+  .class-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .search-bar input {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  .class-card {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
 }
